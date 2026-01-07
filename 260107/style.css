@@ -1,0 +1,89 @@
+.logo_image {
+  width: 40px;
+  height: auto;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex:1 0 0;
+  padding: 0px 20px;
+    border-bottom: 1px solid black; 
+}
+
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  flex: 9 0 0
+}
+
+.profile{
+  display: flex;
+  justify-content: center;
+  flex: 7 0 0;
+  height: 100%;
+  border-bottom: 1px solid black;
+}
+
+.profile-photo{
+  display: flex;
+  /*background-color: skyblue;*/
+  flex: 4 0 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 0 0 150px;
+  border-right: 1px solid black;
+}
+
+.profile-image{
+  max-width: 70%;
+}
+
+.profile-text{
+  display: flex;
+  /*background-color: greenyellow;*/
+  flex: 6 0 0;
+  align-items: flex-start;
+  padding-left: 150px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.links {
+  display: flex; /* 추가! */
+  flex:3 0 0;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  flex-direction: column;
+}
+
+.links-nav {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  align-content: center;
+  flex:4;
+}
+
+.link-text {
+  flex: 3;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
