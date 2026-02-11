@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title">This is DOM Practice Project</h1>
+    <input id="userInput" type="text" />
+    <button class="addBtn">Add</button>
+    <button class="rmvBtn">Remove</button>
+    <ul id="inputList">
+      This is List
+    </ul>
+
+    <script>
+      const $button = document.querySelector(".addBtn");
+      const $input = document.getElementById("userInput");
+      const $inputList = document.getElementById("inputList");
+
+      $button.addEventListener("click", function () {
+        if ($input.value.trim() !== "") {
+          const $li = document.createElement("li");
+          const $checkbox = document.createElement("input");
+          $checkbox.type = "checkbox";
+
+          $li.appendChild(document.createTextNode($input.value));
+          $li.appendChild($checkbox);
+
+          $inputList.appendChild($li);
+          $input.value = "";
+        } else {
+          alert("입력 후 다시 추가 버튼을 누르세요");
+        }
+      });
+
+      const $removeButton = document.querySelector(".rmvBtn");
+
+      $removeButton.addEventListener("click", function () {
+        const $lists = document.querySelectorAll("#inputList li");
+        let counter = 0;
+
+        $lists.forEach(($li) => {
+          const $checkbox = $li.querySelector("input[type='checkbox']");
+
+          if ($checkbox.checked) {
+            $li.remove();
+            counter++;
+          }
+        });
+
+        if (counter === 0) {
+          alert("제거할 항목을 선택해주세요.");
+        }
+      });
+    </script>
+  </body>
+</html>
